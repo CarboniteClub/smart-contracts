@@ -181,18 +181,6 @@ const main = async () => {
     const near = await connect(config);
     const signer_account = await near.account("dev-1654805564805-31927949115487")
     const contract = setup_contract(signer_account, contract_id);
-    const token_id = "token-2";
-    const carbonite_metadata = {
-        "skills": {
-            "blockchain": 60,
-            "design": 60
-        },
-        "overalls": {
-            "growth": 20
-        }
-    }
-
-    await update_carbonite_metadata(contract, token_id, carbonite_metadata);
 }
 
 main();
